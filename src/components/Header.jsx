@@ -1,9 +1,11 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import {AiOutlineMail, AiOutlinePhone} from "react-icons/ai"
+import {HiOutlineLocationMarker} from "react-icons/hi"
 
 const Header = () => {
     const [data, setData] = useState(null)
-    
+
     const getApi = () => {
 
         axios.get("https://randomuser.me/api/").then((res) => {
@@ -24,13 +26,16 @@ const Header = () => {
             <div className='flex justifu-between items-center flex-col w-[30rem] h-[30rem] mx-auto text-center bg-blue-300 p-4'>
             <img src={data.picture.large} alt="" className="rounded-full w-[9rem]"/>
             <p className="text-2xl">{data.name.title} {data.name.first} {data.name.last}</p>
-            <p>
+            <p className='flex item-center'>
+            <AiOutlineMail className='text-2xl mr-2'/>
             {data.email}
             </p>
-            <p>
+            <p className='flex item-center'>
+            <AiOutlinePhone className='text-2xl mr-2'/>
             {data.phone}
             </p>
-            <p>
+            <p className='flex item-center'>
+            <HiOutlineLocationMarker className='text-2xl mr-2'/>
              {data.location.city}-{data.location.country}
            </p>
            <p>
