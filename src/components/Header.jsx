@@ -23,7 +23,7 @@ const Header = () => {
     return (<div className='w-full min-h-screen flex flex-col justify-center items-center'>
         <div className='bos'>
            {data ? (
-            <div className='flex justifu-between items-center flex-col w-[30rem] h-[30rem] mx-auto text-center bg-blue-300 p-4'>
+            <div className='flex justify-between items-center flex-col w-[30rem] h-[30rem] mx-auto text-center bg-blue-300 p-4'>
             <img src={data.picture.large} alt="" className="rounded-full w-[9rem]"/>
             <p className="text-2xl">{data.name.title} {data.name.first} {data.name.last}</p>
             <p className='flex item-center'>
