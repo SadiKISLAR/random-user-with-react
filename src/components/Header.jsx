@@ -24,8 +24,28 @@ const Header = () => {
         <div className='w-full min-h-screen flex flex-col justify-center items-center'>
             <div className="bos">
                 {data ? (
-                
-            )}</div>
+                    <div className='flex justify-between items-center flex-col w-[30rem] h-[30rem] mx-auto text-center bg-blue-300 p-4'>
+                        <img
+                            src={data.picture.large}
+                            alt={data.name.first}
+                            className="rounded-full w-[9rem]" />
+                        <p className=' text-2xl'> {data.name.title} {data.name.first} {data.name.last} </p>
+                        <p className=''> {data.email} </p>
+                        <p> {data.phone} </p>
+                        <p> {data.location.city} / {data.location.country} </p>
+                        <p> Age: {data.dob.age}</p>
+                        <p>Register Date: {data.registered.date.slice(0, 10)}</p>
+
+                    </div>
+
+                ) : "No result found"}
+            </div>
+            <button
+                className='bg-blue-500 
+            p-1 text-white 
+            hover:bg-slate-400 
+            hover:tezt-black mt-5'
+                onClick={() => getApi()}>Random User</button>
         </div>
     )
 }
