@@ -6,3 +6,6 @@
 ## Used Tech and Libraries
 - ReactJS
 - SASS Module
+
+
+![random user](https://user-images.githubusercontent.com/108137435/213372131-7fbba6b9-0859-4079-8b62-cfe0eb282544.gif)
